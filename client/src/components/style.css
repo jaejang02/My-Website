@@ -1,0 +1,284 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+.home-button {
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+.nav-link {
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 100px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+
+
+.nav-link:hover {
+    color: white;
+    background-color: black;
+}
+
+/* Home page header*/
+
+.typing{
+    display: inline-block;
+    height: 2.5rem;
+}
+.header-text {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    font-weight: "Thin 100";
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s,
+        cursor .4s step-end infinite alternate; 
+}
+
+.header2-text {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    font-weight: "Thin 100";
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 25px;
+    animation: 
+        typing 2s,
+}
+
+.about-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+.about-fixing-image {
+    user-select: none;
+}
+.about-Image {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 400px;
+    width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+.about-Image:hover {
+    transform: scale(1.3);
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    margin-left: 300px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.about-text h1{
+    font-size: 70px;
+    white-space: nowrap; /*keeps all the animations in single line*/
+    overflow: hidden;
+    animation:
+        typing 2s
+
+}
+
+.about-text p {
+    font-size: 32px;
+}
+
+
+/*cursor blinking*/
+@keyframes cursor {
+    50% { border-color: transparent}
+}
+/*typing effect*/
+@keyframes typing {
+    from  {width: 0}
+    to {width: 100%}
+}
+
+/* CSS for projects route*/
+.accordion{
+    padding: 0;
+    margin: 0;
+    margin-top: 25px;
+    box-sizing: border-box;
+}
+
+.accordion .container {
+    max-width: 650px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.accordion .wrapper {
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+
+.accordion .wrapper .question-container {
+    width: 100%;
+    text-align: left;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.accordion .question-container.active {
+    color: white;
+    background-image: linear-gradient(90deg,rgba(0,0,0),rgba(0,0,0, 0.7),transparent);
+}
+
+.accordion .wrapper .question-container:hover {
+    color: black;
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.04),transparent);
+}
+
+.accordion .question-container.Jasmin.active {
+    color: white;
+    background-image: linear-gradient(90deg,rgba(0,209,133), white);
+}
+
+.accordion .wrapper .question-container.Jasmin:hover {
+    color: rgb(0, 209, 133);
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.04),transparent);
+}
+
+.accordion .question-container.Word-Boss.active {
+    color: white;
+    background-image: linear-gradient(90deg,rgb(255,140,0), white);
+}
+
+.accordion .wrapper .question-container.Word-Boss:hover {
+    color: rgb(255,140,0);
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.04),transparent);
+}
+
+.accordion .question-container.Jimbro.active {
+    color: white;
+    background-image: linear-gradient(90deg,#325288, white);
+}
+
+.accordion .wrapper .question-container.Jimbro:hover {
+    color: #325288; ;
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.04),transparent);
+}
+
+.accordion .question-container.Trvl.active {
+    color: white;
+    background-image: linear-gradient(90deg,#FF1A1A, white);
+}
+
+.accordion .wrapper .question-container.Trvl:hover {
+    color: #FF1A1A; ;
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.04),transparent);
+}
+
+.accordion .wrapper .arrow {
+  font-size: 2rem;
+  transition: .5s ease-in-out;
+}
+
+
+
+.accordion .arrow.active {
+  rotate: 180deg;
+  color: black;
+}
+
+.accordion .wrapper .answer-container {
+  padding: 0 1rem;
+  transition: height .7s ease-in-out;
+}
+
+.accordion .wrapper .answer-content {
+  padding: 1rem 0;
+  font-size: 25px;
+  font-style: italic;
+}
+.hover-link {
+    position: relative;
+    text-decoration: none;
+    border-left: 1px solid #fff;
+    user-select: none;
+}
+
+.hover-link:hover{
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.hover-link:hover .hover-text {
+    opacity: 1;
+}
+.hover-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 3);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .git-Image {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 25px;
+}
+.git-Image:hover {
+    transform: scale(1.3);
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+}
+.hover-link:hover .git-text {
+    opacity: 1;
+}
+.git-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 3);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
