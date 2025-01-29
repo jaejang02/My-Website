@@ -87,7 +87,7 @@ const DisplayProjects = () => {
     const data = [
         {
             title: 'Jasmin',
-            description: "Jasmin is website that allows users to connect with therapists based on mental health conditions. Users can become potential patients using the search feature, allowing them to filter therapists based on their specialties. Users can schedule appointments, send messages, and make video calls with their connected therapists. They can even use the chatBot to asks mental health related questions. This website was done for Jasmin, a non-profit organization located in Ukraine.",
+            description: "Jasmin is website that allows users to connect with therapists based on mental health conditions. Users can become potential patients using the search feature, allowing them to filter therapists based on their specialties. Users can schedule appointments, send messages, and make video calls with their connected therapists. Potential Patients can even use the chatBot to ask mental health related questions. This website was done for Jasmin, a non-profit organization located in Ukraine.",
             frontEnd: ['React.js', 'Material UI', 'Gemini', 'Whereby'],
             backEnd: ['MongoDB', 'Firebase', 'Express.js', 'Node.js'],
             url: 'https://github.com/jaejang02/jasmin'
@@ -95,7 +95,7 @@ const DisplayProjects = () => {
         },
         {
             title: 'Jimbro',
-            description: "Jimbro is a website that allows users to schedule their weekly workouts with an online calendar. Users can also post their weekly workouts in thier community page and communicate with other users. For visual representation, pie charts of the weekly workouts and line graphs of the user's progress are displayed.",
+            description: "Jimbro is a website that allows users to schedule their weekly workouts with an online calendar. Users can also post their weekly workouts in thier community page and communicate with other people. For visual representation, pie charts is used to display the balance in a person's website, while line graphs are used to display the user's workout progress.",
             frontEnd: ['Bootstrap', 'Chart.js'],
             backEnd: ['MongoDB', 'Express.js', 'Node.js'],
             url: 'https://github.com/jaejang02/cs-546-fitness-app'
@@ -109,7 +109,7 @@ const DisplayProjects = () => {
         },
         {
             title: 'Trvl',
-            description: "Travel uses the Yelp-Api to allow users to create an iternary for their next coming trip. The intent of this website is to give users a platform to check-in at events, hotels, and restuarants in one website.",
+            description: "Trvl uses the Yelp-Api to allow users to create an iternary for their next coming trip. The intent of this website is to give users a platform to check-in for events, hotels, and restuarants all in one website.",
             frontEnd: ['React.js', 'ImageMagick', 'Material UI', 'MagicSearch'],
             backEnd: ['MongoDB', 'Express.js', 'Redis'],
             url: "https://github.com/jaejang02/cs-554-trvl"
