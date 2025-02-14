@@ -15,9 +15,6 @@ function MyNavBar() {
             <Nav.Link className="nav-link">
               Hobbies
             </Nav.Link>
-            <Nav.Link className = "nav-link" href='/resume'>
-              Resume
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

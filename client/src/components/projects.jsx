@@ -1,5 +1,5 @@
 import './style.css';
-import React, {useState, useEffect, useRef}  from "react";
+import React, {useState, useEffect, useRef}  from "react"
 // import { Accordion } from 'react-bootstrap';
 import pov from '../img/pov.jpg'
 import git_icon from '../img/git-icon.png'
@@ -52,7 +52,7 @@ const DisplayAccordion = ({title, description, frontEnd, backEnd, url, isOpen, o
         <div className = 'wrapper'>
             <button className={`question-container ${title} ${isOpen ? 'active' : ''}`} onClick={onClick} >
                 <p className='question-content'>{title}</p>
-                <RiArrowDropDownLine className={`arrow ${isOpen ? 'active' : ''}`} /> 
+                <RiArrowDropDownLine className={`arrow ${title} ${isOpen ? 'active' : ''}`} /> 
             </button>
             <div ref={contentHeight} className="answer-container" 
                 style={
