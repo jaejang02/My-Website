@@ -5,11 +5,38 @@ import pov from '../img/pov.jpg'
 import git_icon from '../img/git-icon.png'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import {Image} from 'react-bootstrap';
+
+// This is for hovering over icons, and showing the span text 
+// for mobile phones, it should not even show the span
+const DisplayText = () => {
+    const [isMobile, setMobile] = useState(window.innerWidth >= 1024);
+
+    useEffect(() => {
+        // checks the size of the window
+        const handleResize = () => {
+            setMobile(window.innerWidth >= 1024);
+        };
+        // clears memory for everytime called
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize);
+    },  []);
+
+    return (
+        <div>
+            {isMobile && <SpanComponent/>}
+        </div>
+    );
+}
+const SpanComponent = () => {
+    return <span className ="git-text">Github Link</span>;
+};
+
+// typing effect for the header of website
 const TypingText = ({text, typingSpeed = 100, deletingSpeed = 50, pauseTime = 1000}) => {
     const [isDeleting, setDeleting] = useState(false);
     const [displayText, setDisplayedText]  = useState("");
     const [index, setIndex] = useState(0);
-
+    
     useEffect(() => {
         const handleTyping = () => {
             // deleting the text
@@ -46,6 +73,7 @@ const TypingText = ({text, typingSpeed = 100, deletingSpeed = 50, pauseTime = 10
             </div>
     );
 };
+// displaying the different clickable accordions
 const DisplayAccordion = ({title, description, frontEnd, backEnd, url, isOpen, onClick}) => {
     const contentHeight = useRef()
     return(
@@ -65,24 +93,26 @@ const DisplayAccordion = ({title, description, frontEnd, backEnd, url, isOpen, o
             <h3>Front-End:</h3>
             <ul>
                 {frontEnd.map((tool, index) => (
-                    <li key = {index} style ={{fontSize: "25px", fontStyle: "italic"}}>{tool}</li>
+                    <li key = {index} className = "accordion-items">{tool}</li>
                 ))}
             </ul>
             <h3>Back-End:</h3>
             <ul>
                 {backEnd.map((tool, index) => (
-                    <li key = {index} style ={{fontSize: "25px", fontStyle: "italic"}}>{tool}</li>
+                    <li key = {index} className = "accordion-items">{tool}</li>
                 ))}
             </ul>
 
             <a href={url} target="_blank" rel="noopener noreferrer" className="hover-link">
                 <Image src={git_icon} className ="git-Image"/>
-                <span className ="git-text">Github Link</span>
+                <DisplayText/>
             </a>
             </div>
         </div>
     )
 };
+
+// overall page
 const DisplayProjects = () => {
     const data = [
         {
@@ -124,7 +154,7 @@ const DisplayProjects = () => {
             <div className ="middle-align">
                 <a href ="https://github.com/jaejang02?tab=repositories" target="_blank" rel="noopener noreferrer" className="hover-link">
                     <Image src = {pov} className ="about-Image"/>
-                    <span className ="hover-text">My Github</span>
+                    <DisplayText/>
                 </a>
             </div>
             <div className='middle-align'>
