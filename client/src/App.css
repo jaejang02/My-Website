@@ -45,5 +45,14 @@
 .middle-align {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }

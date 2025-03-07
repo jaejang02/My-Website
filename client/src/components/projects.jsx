@@ -1,14 +1,12 @@
 import './style.css';
 import React, {useState, useEffect, useRef}  from "react"
 // import { Accordion } from 'react-bootstrap';
-import pov from '../img/pov.jpg'
 import git_icon from '../img/git-icon.png'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import {Image} from 'react-bootstrap';
-
 // This is for hovering over icons, and showing the span text 
 // for mobile phones, it should not even show the span
-const DisplayText = () => {
+const GithubSpan = () => {
     const [isMobile, setMobile] = useState(window.innerWidth >= 1024);
 
     useEffect(() => {
@@ -91,7 +89,7 @@ const DisplayAccordion = ({title, description, frontEnd, backEnd, url, isOpen, o
             <h3>Description:</h3>
             <p className="answer-content">{description}</p>
             <h3>Front-End:</h3>
-            <ul>
+            <ul>    
                 {frontEnd.map((tool, index) => (
                     <li key = {index} className = "accordion-items">{tool}</li>
                 ))}
@@ -105,7 +103,7 @@ const DisplayAccordion = ({title, description, frontEnd, backEnd, url, isOpen, o
 
             <a href={url} target="_blank" rel="noopener noreferrer" className="hover-link">
                 <Image src={git_icon} className ="git-Image"/>
-                <DisplayText/>
+                <GithubSpan/>
             </a>
             </div>
         </div>
@@ -116,29 +114,29 @@ const DisplayAccordion = ({title, description, frontEnd, backEnd, url, isOpen, o
 const DisplayProjects = () => {
     const data = [
         {
-            title: 'Jasmin',
-            description: "Jasmin is website that allows users to connect with therapists based on mental health conditions. Users can become potential patients using the search feature, allowing them to filter therapists based on their specialties. Users can schedule appointments, send messages, and make video calls with their connected therapists. Potential Patients can even use the chatBot to ask mental health related questions. This website was done for Jasmin, a non-profit organization located in Ukraine.",
+            title: 'Jasmin      (Internship)',
+            description: "Jasmin is website that allows users to connect with therapists based on mental health conditions. Users can become potential patients using the search feature, allowing them to filter therapists based on their specialties. Users can schedule appointments, send messages, and make video calls with their connected therapists. Potential Patients can even use the chatBot to ask mental health related questions. This website was done for and named after Jasmin, a non-profit organization located in Ukraine.",
             frontEnd: ['React.js', 'Material UI', 'Gemini', 'Whereby'],
             backEnd: ['MongoDB', 'Firebase', 'Express.js', 'Node.js'],
             url: 'https://github.com/jaejang02/jasmin'
 
         },
         {
-            title: 'Jimbro',
+            title: 'Jimbro      (Project)',
             description: "Jimbro is a website that allows users to schedule their weekly workouts with an online calendar. Users can also post their weekly workouts in thier community page and communicate with other people. For visual representation, pie charts is used to display the balance in a person's website, while line graphs are used to display the user's workout progress.",
             frontEnd: ['Bootstrap', 'Chart.js'],
             backEnd: ['MongoDB', 'Express.js', 'Node.js'],
             url: 'https://github.com/jaejang02/cs-546-fitness-app'
         },
         {
-            title: 'Word-Boss',
+            title: 'Word-Boss       (Project)',
             description: "Word-Boss is a website that helps people learn and memorize words. This is to help children easily prepare for the SAT (Scholastic Aptitude Test) from an early age. The website contains multiple choice and fill-in the blank quizzes that test the person's knowledge of these high-level words. Users can even login using their emails to track their overall progrssion.",
             frontEnd: ['Bootstrap'],
             backEnd: ['MongoDB', 'Express.js', 'Bcryptjs', 'Node.js'],
             url: 'https://github.com/jaejang02/CS555-TEAM4-MOSS'
         },
         {
-            title: 'Trvl',
+            title: 'Trvl       (Project)',
             description: "Trvl uses the Yelp-Api to allow users to create an iternary for their next coming trip. The intent of this website is to give users a platform to check-in for events, hotels, and restuarants all in one website.",
             frontEnd: ['React.js', 'ImageMagick', 'Material UI', 'MagicSearch'],
             backEnd: ['MongoDB', 'Express.js', 'Redis'],
@@ -148,15 +146,9 @@ const DisplayProjects = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const handleItemClick = (index) => {
         setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
-       };
+    };
     return (
         <div>
-            <div className ="middle-align">
-                <a href ="https://github.com/jaejang02?tab=repositories" target="_blank" rel="noopener noreferrer" className="hover-link">
-                    <Image src = {pov} className ="about-Image"/>
-                    <DisplayText/>
-                </a>
-            </div>
             <div className='middle-align'>
                 <TypingText
                     text = {["Hello There!", "These are the list of my projects!", "Hope you find them intriguing!"]}

@@ -1,12 +1,9 @@
 import './style.css'
 import Title from './Title';
 import AboutMe from './aboutMe';
-// import despair from '../img/Despair.jpg'
-import Button from 'react-bootstrap/Button'
-// import {Image} from 'react-bootstrap'
 import React, {useEffect} from "react";
-import resume from '../img/Resume.pdf'
-function Home() {
+import Project from './projects';
+const  Home = ()=> {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -26,20 +23,14 @@ function Home() {
     }, []);
     return (
         <div>
-            
-            <section className ="hidden">
+            <section id = 'title' className ="hidden">
                 <Title/>
             </section>
-            <section className= "hidden">
+            <section id = 'aboutMe'className= "hidden">
                 <AboutMe/>
             </section>
-            <section className = "hidden">
-                <div>
-                    <h2 className ='header2-text'>Gmail: jaejang2002@gmail.com</h2>
-                </div>
-                <div>
-                    <Button href={resume} download className="resume-button">Download Copy of Resume</Button>
-                </div>
+            <section id = 'projects' className= "hidden">
+                <Project/>
             </section>
         </div>
     )
