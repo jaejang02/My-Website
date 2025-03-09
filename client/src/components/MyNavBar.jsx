@@ -44,7 +44,7 @@ const MyNavBar = () => {
             <Nav.Link className="nav-link" href='/#projects' onClick = {handleSmoothScroll}>
               Projects / Experience
             </Nav.Link>
-            <Nav.Link className="nav-link" href='/resume'>
+            <Nav.Link className="nav-link" href='/resume' onClick = {handleSmoothScroll}>
               Resume
             </Nav.Link>
           </Nav>
