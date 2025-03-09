@@ -38,13 +38,13 @@ const MyNavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">  {/* Aligns Nav to the right side */}
-            <Nav.Link className="nav-link" href='/#/aboutMe' onClick = {handleSmoothScroll}>
+            <Nav.Link className="nav-link" href='/#aboutMe' onClick = {handleSmoothScroll}>
               About
             </Nav.Link>
-            <Nav.Link className="nav-link" href='/#/projects' onClick = {handleSmoothScroll}>
+            <Nav.Link className="nav-link" href='/#projects' onClick = {handleSmoothScroll}>
               Projects / Experience
             </Nav.Link>
-            <Nav.Link className="nav-link" href='/#/resume'>
+            <Nav.Link className="nav-link" href='/#resume'>
               Resume
             </Nav.Link>
           </Nav>
