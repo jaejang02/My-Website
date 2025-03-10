@@ -34,7 +34,7 @@ const MyNavBar = () => {
   return (
     <Navbar expand="lg" bg="light" fixed ='top'>
       <Container fluid>
-        <Navbar.Brand className='nav-link' href="/">My Profile</Navbar.Brand>
+        <Navbar.Brand className='nav-link' href="/My-Website">My Profile</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">  {/* Aligns Nav to the right side */}
@@ -44,7 +44,7 @@ const MyNavBar = () => {
             <Nav.Link className="nav-link" href='#projects' onClick = {handleSmoothScroll}>
               Projects / Experience
             </Nav.Link>
-            <Nav.Link className="nav-link" href='/resume'>
+            <Nav.Link className="nav-link" href='/My-Website/resume'>
               Resume
             </Nav.Link>
           </Nav>

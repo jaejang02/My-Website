@@ -14,8 +14,8 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path ='/' element = {<Home/>}/>
-          <Route path ='/resume' element = {<Resume/>}/>
+          <Route path ='/My-Website' element = {<Home/>}/>
+          <Route path ='/My-Website/resume' element = {<Resume/>}/>
         </Routes>
       </main>
     </div>
