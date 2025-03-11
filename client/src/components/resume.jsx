@@ -4,7 +4,7 @@ const MyResume = () => {
     return(
         <div className ='pdf'>
             <iframe
-                src={`${process.env.PUBLIC_URL}/myResume.pdf`}
+                src={`${process.env.PUBLIC_URL}/Jae_Hong_Jang_Resume.pdf`}
                 width ="100%"
                 height ="1200px"
                 loading = "lazy"
