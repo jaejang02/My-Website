@@ -47,7 +47,8 @@ const Title = () => {
                     <GithubSpan input={data[1]}/>
                 </Link>
                 <Link className = "hover-link">
-                    <Image src = {gmailIcon} className ="icons"></Image>
+                    <Image src={gmailIcon} className ="icons"></Image>
+                    <GithubSpan input="jaejang2002@gmail.com"/>
                 </Link>
             </div>
         </div>

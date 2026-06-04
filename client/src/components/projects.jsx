@@ -151,7 +151,7 @@ const DisplayProjects = () => {
         <div>
             <div className='middle-align'>
                 <TypingText
-                    text = {["Hello There!", "These are the list of my projects!", "Hope you find them intriguing!"]}
+                    text = {["My Projects!"]}
                     typingSpeed= {100}
                     deletingSpeed={50}
                     pauseTime ={1000}
